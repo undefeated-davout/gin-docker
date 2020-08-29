@@ -1,0 +1,4 @@
+.idea/
+
+/go/src/code/*
+!/go/src/code/.golangci.yml

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+#     build: .
+    image: teruzoufox/gin-docker
+    container_name: gin-docker.app
+    ports:
+      - 8080:8080
+      - 2345:2345
+    volumes:
+      - ./go/src/code:/opt/go_lang/go/src/code
+    tty: true
+    privileged: true
+    security_opt:
+      - apparmor:unconfined
+    cap_add:
+      - SYS_PTRACE
